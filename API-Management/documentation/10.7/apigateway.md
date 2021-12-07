@@ -1,5 +1,7 @@
 # webmethods API Gateway Containers
 
+<mark>This page is specically for *version 10.7* of SoftwareAG webmethods API Gateway</mark>
+
 ## SoftwareAG Product Documentation
 
 Find the official SoftwareAG webMethods APIGateway product documentation here: 
