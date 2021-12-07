@@ -27,12 +27,12 @@ Depending on the deployment type, all these components will be either distribute
 ## Container Options
 
 As such, we provide 2 APIGateway containers:
-- webmethods-apigateway
-- webmethods-apigateway-standalone
+- [webmethods-apigateway](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-apigateway)
+- [webmethods-apigateway-standalone](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-apigateway-standalone)
 
 ### webmethods-apigateway
 
-This is the core apigateway container that only includes the artifacts required to run a webMethods APIGateway engine, without any of the required dependencies.
+[webmethods-apigateway](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-apigateway) is the core apigateway container that only includes the artifacts required to run a webMethods APIGateway engine, without any of the required dependencies.
 This container option is ideal for clustered deployments of webMethods APIGateway where the Elastic Stack (Elastic Search, Kibana) is installed, deployed, and running externally to the APIGateway (ie. in their own containers)
 
 The main benefit is that this container is the smallest, without any unneeded components built-in.
@@ -40,13 +40,13 @@ The draw-back of this container is that it will not start a fully functionning A
 
 ### webmethods-apigateway-standalone
 
-With this container, everything is included in one container. 
+With [webmethods-apigateway-standalone](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-apigateway-standalone), everything is included in one container. 
 The main benefit is that a single instance of this container will start a fully functionning APIGateway.
 The draw-back is that it's a larger container that will include unneeded components for a production-like clustered deployment (since in such deployment, Elastic stack should be running separately, for example in its own cluster of containers)
 
 ## Container Parameters
 
-Non-Root user: saguser (id=1724)
+Non-Root user used by the container: saguser (id=1724)
 
 ### Core Environment variables
 
