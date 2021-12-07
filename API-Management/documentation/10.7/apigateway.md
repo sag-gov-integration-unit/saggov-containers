@@ -48,33 +48,85 @@ The draw-back is that it's a larger container that will include unneeded compone
 
 Non-Root user: saguser (id=1724)
 
-Core env:
+### Core Environment variables
 
-JAVA_MIN_MEM: 512m
-JAVA_MAX_MEM: 512m
-JAVA_OPTS: ""
-RUNTIME_WATT_PROPERTIES: ""
-EXTERN_ELASTICSEARCH="true"
-PORT_RUNTIME="${gateway_runtime_port}"
-PORT_RUNTIME_SSL="${gateway_runtime_port_ssl}"
-PORT_GATEWAYUI="${gateway_port}"
-PORT_GATEWAYUI_SSL="${gateway_port_ssl}"
+| ENV variables           | Defaults | Description                                                                                                |
+|-------------------------|----------|------------------------------------------------------------------------------------------------------------|
+| JAVA_MIN_MEM            |  512m    | Minimum Assigned Memory for the Runtime                                                                    |
+| JAVA_MAX_MEM            |  1024m   | Maximum Assigned Memory for the Runtime                                                                    |
+| JAVA_OPTS               | -        | Java properties for the runtime                                                                            |
+| RUNTIME_WATT_PROPERTIES | -        | APIGateway Runtime WATT properties - space separated list of   properties                                  |
+| EXTERN_ELASTICSEARCH    | TRUE*    | Whether to enable APIGateway internal Elastic Search - *   default to "false" for the Standalone container |
+| PORT_RUNTIME            | 5555     | The APIGateway runtime port (plain) - used for API calls                                                   |
+| PORT_RUNTIME_SSL        | 5543     | The APIGateway runtime port (SSL) - used for API calls                                                     |
+| PORT_GATEWAYUI          | 9072     | The APIGateway UI port (plain) - use strictly for the   Administration UI                                  |
+| PORT_GATEWAYUI_SSL      | 9073     | The APIGateway UI port (SSL) - use strictly for the   Administration UI                                    |
+| IDS_HEAP_SIZE           | -        | This property will set the HEAP memory used by the internal Elastic search (if using it)                   |
+| IDS_PROPERTIES_ADD      | -        | Space separated list of specific Elastic Search properties to add to the internal Elastic search (if using it)      |
+| IDS_PROPERTIES_REMOVE   | -        | Space separated list of specific Elastic Search properties to remove from the internal Elastic search (if using it) |
 
-APIGateway external config envs:
+### APIGateway External Configuration By File
 
-      APIGW_ELASTICSEARCH_TENANTID: apigateway
-      APIGW_ELASTICSEARCH_HOSTS: elasticsearch:9200
-      APIGW_ELASTICSEARCH_AUTOSTART: "false"
-      APIGW_ELASTICSEARCH_HTTP_USERNAME: elastic
-      APIGW_ELASTICSEARCH_HTTP_PASSWORD: SomeStrongPassword!
-      APIGW_ELASTICSEARCH_HTTPS_ENABLED: "false"
-      APIGW_KIBANA_DASHBOARDINSTANCE: http://kibana:5601
-      APIGW_KIBANA_AUTOSTART: "false"
-      CLUSTER_AWARE: "true"
-      CLUSTER_NAME: APIGatewayTSAcluster
-      CLUSTER_TSAURLS: terracotta:9510
-      CLUSTER_SESSTIMEOUT: 20
-      CLUSTER_ACTIONONSTARTUPERROR: shutdown
-      CLUSTER_CONNECTTIMEOUT: 30000
+The container supports the setup of an external configuration file as explained:
 
+[webmethods API Gateway 10.7 Product documentation > Externalizing Configurations](https://documentation.softwareag.com/webmethods/api_gateway/yai10-7/10-7_API_Gateway_webhelp/index.html#page/api-gateway-integrated-webhelp%2Fco-externalizing_configurations_overview.html%23)
 
+To load external configuration files into the gateway, simply mount well formatted configuration files (either YAML or PROPERTIES, as defined by the above product documentation) into the container at the following PATH: /configs
+
+For example, in docker, you would create a local folder containing some well formatted configuration files (either YAML or PROPERTIES, as defined by the above product documentation), and mount the directory at docker run command using the "mount volume" argument... ie:
+
+```
+docker run -v /my/local/configs:/configs ${REG}webmethods-apigateway:prod-10.7-latest
+```
+
+As stated in the documentation, a sample external configuration file is as follows:
+
+```
+apigw:
+  elasticsearch:
+    tenantId: apigateway
+    hosts: localhost:9200
+    autostart: false
+    http:
+      username: elastic
+      password: changeme
+      keepAlive: true
+      keepAliveMaxConnections: 10
+      keepAliveMaxConnectionsPerRoute: 100
+      connectionTimeout: 1000
+      socketTimeout: 10000
+      maxRetryTimeout: 100000
+    https:
+      enabled: false
+      keystoreFilepath: C:/softwares/elasticsearch/config/keystore-new.jks
+      truststoreFilepath: C:/softwares/elasticsearch/config/truststore-new.ks
+      keystoreAlias: root-ca
+      keystorePassword: 6572b9b06156a0ff778c
+      truststorePassword: manage
+      enforceHostnameVerification: false
+    sniff:
+      enable: false
+      timeInterval: 1000
+    outboundProxy:
+      enabled: false
+      alias: somealias
+    clientHttpResponseSize: 1001231
+```
+
+### APIGateway External Configuration By Environment variables
+
+All the external configurations can also be set via environment variables.
+
+NOTE: It is possible to setup **both a configuration file AND environment Variables** (ie. for default values that change less frequently are setup in a file, and the changing values are setup in environment variables). If a value is specified in both a config file AND an environment variable, the environment variables is the one that wins.
+
+The environment variables follow the configuration file structure with the following format:
+ <parent>_<child>_<child>=<value>
+
+For example, to specify an external elastic search, the following environment variables would be specified on the container:
+
+```
+apigw_elasticsearch_hosts=host:port
+apigw_elasticsearch_https_enabled=("true" or "false")
+apigw_elasticsearch_http_username=user
+apigw_elasticsearch_http_password=password
+```
