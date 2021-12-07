@@ -1,6 +1,14 @@
 # webmethods API Gateway Containers
 
-## Product Documentation
+## SoftwareAG Product Documentation
+
+Find the official SoftwareAG webMethods APIGateway product documentation [here](https://documentation.softwareag.com/webmethods/api_gateway/yai10-7/10-7_API_Gateway_webhelp/index.html)
+
+Specifically, in the context of containers, here are 2 important sections in the documentation:
+
+- [Docker Configuration](https://documentation.softwareag.com/webmethods/api_gateway/yai10-7/10-7_API_Gateway_webhelp/index.html#page/api-gateway-integrated-webhelp%2F_api_gtw_integrated_webhelp_diba2.1.130.html%23)
+
+- [Kubernetes Support](https://documentation.softwareag.com/webmethods/api_gateway/yai10-7/10-7_API_Gateway_webhelp/index.html#page/api-gateway-integrated-webhelp%2F_api_gtw_integrated_webhelp_diba2.1.144.html%23)
 
 ## Introduction
 
