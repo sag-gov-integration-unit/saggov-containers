@@ -1,6 +1,6 @@
 ## Product Containers by Software AG Government Solutions
 
-Inventory and Documentation for the containers provided and maintained by [Software AG Government Solutions](https://www.softwareaggov.com/)
+Inventory and Documentation for the containers provided by [Software AG Government Solutions](https://www.softwareaggov.com/)
 
 # Why our container images?
 
