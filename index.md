@@ -29,6 +29,8 @@ Some sample deployment guides are available at [Container Sample Deployments by 
 
 ### API Gateway
 
+Versions: 10.7, 10.11
+
 - [webmethods-apigateway](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-apigateway)
 - [webmethods-apigateway-standalone](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-apigateway-standalone)
 - [webmethods-apigateway-intkib](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-apigateway-intkib)
@@ -37,15 +39,21 @@ Some sample deployment guides are available at [Container Sample Deployments by 
 
 ### API Microgateway
 
+Versions: 10.7, 10.11
+
 - [webmethods-microgateway](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-microgateway)
 
-### API Developer Portal (10.11)
+### API Developer Portal (>=10.11)
+
+Versions: 10.11
 
 - [webmethods-devportal](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-devportal)
 - [webmethods-devportal-standalone](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-devportal-standalone)
 - [webmethods-devportal-configurator](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-devportal-configurator)
 
-### API Portal (10.7)
+### API Portal (=10.7)
+
+Versions: 10.7
 
 - [webmethods-apiportal](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-apiportal)
 
@@ -56,11 +64,15 @@ Some sample deployment guides are available at [Container Sample Deployments by 
 
 ## Microservice Runtime
 
+Versions: 10.7, 10.11
+
 - [webmethods-msr](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-msr)
 - [webmethods-msr-cloudstreams](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-msr-cloudstreams)
 - [webmethods-msr-art-jdbc](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-msr-art-jdbc)
 
 ## Cross Products
+
+Versions: 10.7, 10.11
 
 - [webmethods-terracotta](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-terracotta)
 - [webmethods-terracotta-tmc](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-terracotta-tmc)
