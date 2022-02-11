@@ -4,16 +4,24 @@ Documentation for the containers provided and maintained by [Software AG Governm
 
 # Why our container images?
 
-The webMethods containers provided by [Software AG Government Solutions](https://www.softwareaggov.com/) are enhanced-security containers for each of the maintained webMethods stacks, with the following highlights:
- - Hardened Container base images sourced from [Iron Bank](https://p1.dso.mil/#/products/iron-bank/) for extra security,
- - Latest SoftwareAG webMethods fix levels,
- - Extra configuration capabilities for easier deployment into various container platforms,
- - Sample blueprint deployments,
+The webMethods containers provided by [Software AG Government Solutions](https://www.softwareaggov.com/) are security-enhanced and continuously maintained containers with the following highlights:
+
+- Hardened Container base images sourced from Iron Bank for extra security,
+- Continuously updated with latest OS fix levels,
+- Continuously updated with latest SoftwareAG product fix levels,
+- Extra configuration capabilities for easier deployment into various container platforms,
+- Availability of Sample blueprint deployments,
 
 # Where can I get these images?
 
 Our images are currently hosted in our protected registry at: 
 [ghcr.io/softwareag-government-solutions/](https://github.com/orgs/softwareag-government-solutions/packages)
+
+# Where can I get sample deployments?
+
+Some sample Helm Charts are provided at [Helm Charts by SoftwareAG Government Solutions](https://softwareag-government-solutions.github.io/saggov-helm-charts/)
+
+Some sample deployment guides are available at [Container Sample Deployments by Software AG Government Solutions](https://github.com/softwareag-government-solutions/webmethods-container-deployments)
 
 # List of Images
 
