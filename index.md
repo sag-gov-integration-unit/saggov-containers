@@ -1,6 +1,6 @@
-## Product Containers by SoftwareAG Government Solutions
+## Software AG Product Containers by Software AG Government Solutions
 
-Documentation for the containers provided and maintained by [Software AG Government Solutions](https://www.softwareaggov.com/)
+Inventory and Documentation for the containers provided and maintained by [Software AG Government Solutions](https://www.softwareaggov.com/)
 
 # Why our container images?
 
@@ -8,7 +8,7 @@ The webMethods containers provided by [Software AG Government Solutions](https:/
 
 - Hardened Container base images sourced from Iron Bank for extra security,
 - Continuously updated with latest OS fix levels,
-- Continuously updated with latest SoftwareAG product fix levels,
+- Continuously updated with latest Software AG product fix levels,
 - Extra configuration capabilities for easier deployment into various container platforms,
 - Availability of Sample blueprint deployments,
 
@@ -19,7 +19,7 @@ Our images are currently hosted in our protected registry at:
 
 # Where can I get sample deployments?
 
-Some sample Helm Charts are provided at [Helm Charts by SoftwareAG Government Solutions](https://softwareag-government-solutions.github.io/saggov-helm-charts/)
+Some sample Helm Charts are provided at [Helm Charts by Software AG Government Solutions](https://softwareag-government-solutions.github.io/saggov-helm-charts/)
 
 Some sample deployment guides are available at [Container Sample Deployments by Software AG Government Solutions](https://github.com/softwareag-government-solutions/webmethods-container-deployments)
 
@@ -89,7 +89,7 @@ Having trouble with these charts? Please submit an issue, right here, on GitHub!
 
 Also, please refer to our blue-print sample deployments project at [webmethods-container-deployments](https://github.com/softwareag-government-solutions/webmethods-container-deployments)
 
-For more information on the SoftwareAG products:
+For more information on the Software AG products:
  - You can Ask a Question in the [TECHcommunity Forums](http://tech.forums.softwareag.com).
  - You can also find additional information in the [Software AG TECHcommunity](http://techcommunity.softwareag.com).
 
