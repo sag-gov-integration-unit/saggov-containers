@@ -17,6 +17,10 @@ The webMethods containers provided by [Software AG Government Solutions](https:/
 Our images are currently hosted in our protected registry at: 
 [ghcr.io/softwareag-government-solutions/](https://github.com/orgs/softwareag-government-solutions/packages)
 
+# How do I get access to the protected registry?
+
+To request access to our enhanced-security and updated images, contact [Software AG Government Solutions](https://www.softwareaggov.com/) at [info@softwareaggov.com](mailto:info@softwareaggov.com)
+
 # Where can I get sample deployments?
 
 Some sample Helm Charts are provided at [Helm Charts by Software AG Government Solutions](https://softwareag-government-solutions.github.io/saggov-helm-charts/)
@@ -79,15 +83,9 @@ Versions: 10.7, 10.11
 - [webmethods-universalmessaging](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-universalmessaging)
 - [webmethods-meteringserver](https://github.com/orgs/softwareag-government-solutions/packages/container/package/webmethods-meteringserver)
 
-# How do i get access?
-
-To request access to our enhanced-security and updated images, contact [Software AG Government Solutions](https://www.softwareaggov.com/) at [info@softwareaggov.com](mailto:info@softwareaggov.com)
-
 ## Support or Contact
 
-Having trouble with these charts? Please submit an issue, right here, on GitHub!
-
-Also, please refer to our blue-print sample deployments project at [webmethods-container-deployments](https://github.com/softwareag-government-solutions/webmethods-container-deployments)
+Having trouble with these containers? Please submit an issue, right here, on GitHub!
 
 For more information on the Software AG products:
  - You can Ask a Question in the [TECHcommunity Forums](http://tech.forums.softwareag.com).
